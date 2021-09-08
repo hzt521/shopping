@@ -7,3 +7,15 @@ export function getHomeMultidata(){
     url:'/home/multidata'//这个接口里包含一些数据
   })
 }
+
+
+export function getHomeData(type,page){
+  //type和page是必传参数
+  return request({
+    url:'/home/data',
+    params:{
+      type,
+      page
+    }
+  })
+}
