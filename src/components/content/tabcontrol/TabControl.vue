@@ -54,11 +54,12 @@ export default{
 
   font-size: 15px;
   background-color: #fff;
+   height: 40px;
+  line-height: 40px;
 }
 .tab-control-item{
   flex:1;
-  height: 40px;
-  line-height: 40px;
+ 
 }
 .active{
 color: var(--color-high-text);
