@@ -44,7 +44,7 @@
         
      获取到数据：res
       
-        this.goods[type].list.push(...res.data.list)
+        this.goods[type].list.push(...res.data.list)   ...意味着可以传多个参数
         
         this.goods[type].page +=1
         
