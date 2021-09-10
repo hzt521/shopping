@@ -48,9 +48,9 @@ export default{
   display:flex;
   text-align: center;
 
-  position: sticky;
+  /* position: sticky;
   top: 44px;
-  z-index: 9;
+  z-index: 9; */
 
   font-size: 15px;
   background-color: #fff;

@@ -35,6 +35,7 @@
       this.scroll = new BScroll(this.$refs.wrapper, {
         click: true,
         observeImage:true,
+        observeDOM:true,
         probeType: this.probeType,
         
       })
