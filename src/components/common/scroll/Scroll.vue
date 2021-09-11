@@ -60,9 +60,18 @@
 
     },
     methods: {
+      //多长时间滚动到哪
       scrollTo(x,y,time=300){
         this.scroll.scrollTo(x,y,time)
-      }
+      },
+      //获取y的位置
+      getScrollY(){
+        return this.scroll.y 
+      },
+      refresh() {
+  //    代理better-scroll的refresh方法
+         this.scroll && this.scroll.refresh()
+       },
       
     },
   }

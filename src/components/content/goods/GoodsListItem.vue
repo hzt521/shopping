@@ -1,6 +1,6 @@
 <template>
   <div class="goodslistitem">
-    <img :src="goodsItem.show.img" alt="">
+    <img :src="goodsItem.show.img" alt="" >
     <div class="goodsinfo">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -26,6 +26,7 @@ export default{
     return{
     }
   }
+  
 }
 </script>
 

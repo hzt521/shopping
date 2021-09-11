@@ -1,6 +1,10 @@
 <template>
   <div class="goodslist">
-   <goods-list-item  class="goodslistitem" v-for= "(item,index) in goods" :key="index" :goodsItem="item"></goods-list-item>
+   <goods-list-item  
+   class="goodslistitem" 
+   v-for= "(item,index) in goods" :key="index" 
+   :goodsItem="item"
+   @click="imageClick"></goods-list-item>
   </div>
 </template>
 
@@ -23,7 +27,12 @@ export default{
   data(){
     return{
     }
-  }
+  },
+  methods: {
+    imageClick(){
+      console.log('跳转到详情页')
+    }
+  },
 }
 </script>
 

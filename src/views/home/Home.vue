@@ -41,6 +41,7 @@ import HomeRecommend from './childComps/HomeRecommend'
 import HomeFeature from './childComps/HomeFeature'
 
 import {getHomeMultidata ,getHomeData} from 'network/home'
+import { log } from 'util';
 
 
 export default{
@@ -72,7 +73,8 @@ export default{
       currentType:'pop',
       isShowBackTop:true,
       tabOffsetTop:0,
-      isTabFixed:false
+      isTabFixed:false,
+      saveY:0,
     }
   },
 
@@ -82,6 +84,23 @@ export default{
        return this.goods[this.currentType].list
      }
   },
+  destroyed() {
+    console.log("销毁")
+  },
+  activated () {
+    //进来时
+    console.log('activated')
+    this.$refs.scroll.scrollTo(0,this.saveY,1)
+    this.$refs.scroll.refresh()
+    
+  },
+  deactivated() {
+    //离开的时候保存位置
+    console.log('deactivated')
+    this.saveY = this.$refs.scroll.getScrollY()
+    console.log(this.saveY)
+  },
+
 
 
   //组件创建好就发送网络请求，创建生命周期函数
